@@ -13,7 +13,7 @@ export class GqlThrottlerGuard extends ThrottlerGuard {
 
     return {
       req: ctx.req,
-      res: ctx.res,
+      res: ctx.res || { header: () => {} },
     };
   }
 }
