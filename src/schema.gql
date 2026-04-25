@@ -1,0 +1,108 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Book {
+  id: Int!
+  title: String!
+  author: String!
+  isbn: String!
+  isAvailable: Boolean!
+  description: String
+  publishedYear: Int
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  imageUrl: String
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type User {
+  id: Int!
+  email: String!
+  name: String!
+  reservations: [Reservation]!
+  createdAt: DateTime!
+}
+
+type Reservation {
+  id: Int!
+  userId: Int!
+  bookId: Int!
+  reservationDate: DateTime!
+  returnDate: DateTime!
+
+  """Fecha real en la que se devolvió el libro"""
+  realReturnDate: DateTime
+  status: ReservationStatus!
+  user: User!
+  book: Book!
+}
+
+enum ReservationStatus {
+  ACTIVA
+  DEVUELTO
+  VENCIDO
+}
+
+type Query {
+  """Obtiene la lista de todos los libros"""
+  getBooks: [Book!]!
+  getReservations: [Reservation!]!
+  reservationsByUser(userId: Int!, startDate: DateTime, endDate: DateTime): [Reservation!]!
+  reservationsByBook(bookId: Int!, startDate: DateTime, endDate: DateTime): [Reservation!]!
+  getUsers: [User!]!
+  user(id: Int!): User!
+}
+
+type Mutation {
+  """Crea un nuevo libro en el catálogo"""
+  createBook(createBookInput: CreateBookInput!): Book!
+
+  """Actualiza la disponibilidad de un libro"""
+  updateBookAvailability(id: Int!, isAvailable: Boolean!): Book!
+
+  """Elimina un libro del catálogo"""
+  removeBook(id: Int!): Book!
+
+  """Actualiza los datos de un libro"""
+  dataUpdateBook(id: Int!, data: UpdateBookInput!): Book!
+  createReservation(createReservationInput: CreateReservationInput!): Reservation!
+  returnBook(reservationId: Int!): Reservation!
+  createUser(createUserInput: CreateUserInput!): User!
+  removeUser(id: Int!): User!
+}
+
+input CreateBookInput {
+  title: String!
+  author: String!
+  imageUrl: String
+  isbn: String!
+  description: String
+  publishedYear: Int
+}
+
+input UpdateBookInput {
+  title: String
+  author: String
+  imageUrl: String
+  isbn: String
+  description: String
+  publishedYear: Int
+  id: Int!
+}
+
+input CreateReservationInput {
+  userId: Int!
+  bookId: Int!
+  reservationDate: DateTime!
+  returnDate: DateTime!
+}
+
+input CreateUserInput {
+  email: String!
+  name: String!
+}
