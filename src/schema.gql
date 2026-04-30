@@ -100,7 +100,7 @@ input UpdateBookInput {
 input CreateReservationInput {
   userId: Int!
   bookId: Int!
-  reservationDate: DateTime = "2026-04-30T18:38:30.888Z"
+  reservationDate: DateTime = "2026-04-30T19:26:08.229Z"
   returnDate: DateTime!
 }
 

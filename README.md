@@ -4,7 +4,7 @@
 2. **Levantar base de datos:** `docker-compose up -d`
 3. **Configurar variables:** Renombrar `.env.example` a `.env` y ajustar si es necesario.
 4. **Sincronizar DB y Tipos:** `npx prisma migrate dev`
-5. **Poblar base de datos (Seed):** `npm run start:dev`
+5. **Poblar base de datos (Seed):** `npx prisma db seed`
 6. **Correr Tests:** `npm test`
 7. **Iniciar App:** `npm run start:dev`
 
