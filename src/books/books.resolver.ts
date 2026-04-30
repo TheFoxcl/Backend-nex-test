@@ -12,15 +12,18 @@ export class BooksResolver {
     name: 'getBooks',
     description: 'Obtiene la lista de todos los libros',
   })
-  async findAll() {
-    return this.booksService.findAll();
+  async findAll(
+    @Args('available', { type: () => Boolean, nullable: true })
+    available?: boolean,
+  ) {
+    return this.booksService.findAll(available);
   }
 
   @Mutation(() => Book, {
     name: 'createBook',
     description: 'Crea un nuevo libro en el catálogo',
   })
-  async createBook(@Args('createBookInput') data: CreateBookInput) {
+  async createBook(@Args('data') data: CreateBookInput) {
     return this.booksService.create(data);
   }
 

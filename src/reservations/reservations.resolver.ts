@@ -2,6 +2,7 @@ import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
 import { ReservationsService } from './reservations.service';
 import { Reservation } from './reservation.entity';
 import { CreateReservationInput } from './dto/create-reservation.input';
+import { GraphQLISODateTime } from '@nestjs/graphql';
 
 @Resolver(() => Reservation)
 export class ReservationsResolver {
@@ -30,8 +31,10 @@ export class ReservationsResolver {
   @Query(() => [Reservation], { name: 'reservationsByUser' })
   async findByUser(
     @Args('userId', { type: () => Int }) userId: number,
-    @Args('startDate', { type: () => Date, nullable: true }) startDate?: Date,
-    @Args('endDate', { type: () => Date, nullable: true }) endDate?: Date,
+    @Args('startDate', { type: () => GraphQLISODateTime, nullable: true })
+    startDate?: Date,
+    @Args('endDate', { type: () => GraphQLISODateTime, nullable: true })
+    endDate?: Date,
   ) {
     return this.reservationsService.findByUser(userId, startDate, endDate);
   }
@@ -39,8 +42,10 @@ export class ReservationsResolver {
   @Query(() => [Reservation], { name: 'reservationsByBook' })
   async findByBook(
     @Args('bookId', { type: () => Int }) bookId: number,
-    @Args('startDate', { type: () => Date, nullable: true }) startDate?: Date,
-    @Args('endDate', { type: () => Date, nullable: true }) endDate?: Date,
+    @Args('startDate', { type: () => GraphQLISODateTime, nullable: true })
+    startDate?: Date,
+    @Args('endDate', { type: () => GraphQLISODateTime, nullable: true })
+    endDate?: Date,
   ) {
     return this.reservationsService.findByBook(bookId, startDate, endDate);
   }

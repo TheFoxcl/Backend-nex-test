@@ -29,7 +29,12 @@ export class UsersService {
   }
 
   async findAll(): Promise<PrismaUser[]> {
-    return await this.prisma.user.findMany();
+    return await this.prisma.user.findMany({
+      include: { reservations: true },
+      orderBy: {
+        id: 'desc',
+      },
+    });
   }
 
   async findOne(id: number) {

@@ -13,6 +13,7 @@ type Book {
   createdAt: DateTime!
   updatedAt: DateTime!
   imageUrl: String
+  isActive: Boolean!
 }
 
 """
@@ -50,7 +51,7 @@ enum ReservationStatus {
 
 type Query {
   """Obtiene la lista de todos los libros"""
-  getBooks: [Book!]!
+  getBooks(available: Boolean): [Book!]!
   getReservations: [Reservation!]!
   reservationsByUser(userId: Int!, startDate: DateTime, endDate: DateTime): [Reservation!]!
   reservationsByBook(bookId: Int!, startDate: DateTime, endDate: DateTime): [Reservation!]!
@@ -60,7 +61,7 @@ type Query {
 
 type Mutation {
   """Crea un nuevo libro en el catálogo"""
-  createBook(createBookInput: CreateBookInput!): Book!
+  createBook(data: CreateBookInput!): Book!
 
   """Actualiza la disponibilidad de un libro"""
   updateBookAvailability(id: Int!, isAvailable: Boolean!): Book!
@@ -72,7 +73,7 @@ type Mutation {
   dataUpdateBook(id: Int!, data: UpdateBookInput!): Book!
   createReservation(createReservationInput: CreateReservationInput!): Reservation!
   returnBook(reservationId: Int!): Reservation!
-  createUser(createUserInput: CreateUserInput!): User!
+  createUser(data: CreateUserInput!): User!
   removeUser(id: Int!): User!
 }
 
@@ -93,12 +94,13 @@ input UpdateBookInput {
   description: String
   publishedYear: Int
   id: Int!
+  isActive: Boolean! = true
 }
 
 input CreateReservationInput {
   userId: Int!
   bookId: Int!
-  reservationDate: DateTime!
+  reservationDate: DateTime = "2026-04-30T18:38:30.888Z"
   returnDate: DateTime!
 }
 

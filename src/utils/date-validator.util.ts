@@ -8,13 +8,16 @@ export const validateDateRange = (
   const now = new Date();
   now.setHours(0, 0, 0, 0);
 
+  const end = new Date(endDate);
+  end.setHours(0, 0, 0, 0);
+
   if (startDate < now) {
     throw new BadRequestException(
       'La fecha inicial no puede ser anterior a hoy.',
     );
   }
 
-  if (endDate <= startDate) {
+  if (end.getTime() < now.getTime()) {
     throw new BadRequestException(
       'La fecha final debe ser posterior a la inicial.',
     );

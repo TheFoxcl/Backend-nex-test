@@ -1,5 +1,5 @@
 import { InputType, Field, Int } from '@nestjs/graphql';
-import { IsNotEmpty, IsInt, IsDate } from 'class-validator';
+import { IsNotEmpty, IsInt, IsDate, IsOptional } from 'class-validator';
 import { Type } from 'class-transformer';
 
 @InputType()
@@ -14,10 +14,11 @@ export class CreateReservationInput {
   @IsNotEmpty()
   bookId!: number;
 
-  @Field(() => Date)
+  @Field(() => Date, { nullable: true })
   @IsDate()
+  @IsOptional()
   @Type(() => Date)
-  reservationDate!: Date;
+  reservationDate?: Date = new Date();
 
   @Field(() => Date)
   @IsDate()

@@ -7,14 +7,19 @@ import { Prisma } from '@prisma/client';
 import { CreateReservationInput } from './dto/create-reservation.input';
 import { PrismaService } from '../prisma/prisma.service';
 import { validateDateRange } from '../utils/date-validator.util';
+import { Reservation } from '@prisma/client';
 
 @Injectable()
 export class ReservationsService {
   constructor(private prisma: PrismaService) {}
 
   async create(createReservationInput: CreateReservationInput) {
-    const { userId, bookId, reservationDate, returnDate } =
-      createReservationInput;
+    const {
+      userId,
+      bookId,
+      reservationDate = new Date(),
+      returnDate,
+    } = createReservationInput;
 
     await this.validateUserAndBook(userId, bookId);
     await this.validateUserLimits(userId);
@@ -38,12 +43,17 @@ export class ReservationsService {
   }
 
   async findAll() {
-    return await this.prisma.reservation.findMany({
+    const reservations = await this.prisma.reservation.findMany({
       include: {
         book: true,
         user: true,
       },
+      orderBy: {
+        reservationDate: 'desc',
+      },
     });
+
+    return reservations.map((res) => this.computeReservationStatus(res));
   }
 
   async returnBook(reservationId: number) {
@@ -137,5 +147,19 @@ export class ReservationsService {
     }
 
     return reservation;
+  }
+
+  private computeReservationStatus(reservation: Reservation) {
+    const now = new Date();
+
+    const isOverdue =
+      reservation.status === 'ACTIVA' &&
+      new Date(reservation.returnDate) < now &&
+      !reservation.realReturnDate;
+
+    return {
+      ...reservation,
+      status: isOverdue ? 'VENCIDO' : reservation.status,
+    };
   }
 }

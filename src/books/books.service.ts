@@ -8,8 +8,13 @@ import { Book } from '../books/book.entity';
 export class BooksService {
   constructor(private prisma: PrismaService) {}
 
-  async findAll(): Promise<Book[]> {
-    return await this.prisma.book.findMany();
+  async findAll(available?: boolean): Promise<Book[]> {
+    return await this.prisma.book.findMany({
+      where: { isAvailable: available, isActive: true },
+      orderBy: {
+        id: 'asc',
+      },
+    });
   }
 
   async create(data: CreateBookInput): Promise<Book> {
@@ -17,7 +22,12 @@ export class BooksService {
   }
 
   async remove(id: number): Promise<Book> {
-    return await this.prisma.book.delete({ where: { id } });
+    return await this.prisma.book.update({
+      where: { id },
+      data: {
+        isActive: false,
+      },
+    });
   }
 
   async updateAvailability(id: number, isAvailable: boolean): Promise<Book> {

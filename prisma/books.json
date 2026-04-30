@@ -1,0 +1,242 @@
+[
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "publishedYear": 2008,
+    "isbn": "9780132350884",
+    "imageUrl": "https://m.media-amazon.com/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg",
+    "description": "A handbook of agile software craftsmanship that teaches you how to write code that is readable and maintainable."
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "publishedYear": 1999,
+    "isbn": "9780201616224",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9780201616224-L.jpg",
+    "description": "One of the most significant books in software development, covering everything from personal responsibility to career development."
+  },
+  {
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "publishedYear": 2018,
+    "isbn": "9780134757599",
+    "imageUrl": "https://m.media-amazon.com/images/I/41as+4o6WFL._SX396_BO1,204,203,200_.jpg",
+    "description": "A guide to improving the design of existing code without changing its external behavior."
+  },
+  {
+    "title": "Design Patterns",
+    "author": "Erich Gamma",
+    "publishedYear": 1994,
+    "isbn": "9780201633610",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9780201633610-L.jpg",
+    "description": "The 'Gang of Four' book that introduced fundamental design patterns to the world of object-oriented programming."
+  },
+  {
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "publishedYear": 2018,
+    "isbn": "9781593279509",
+    "imageUrl": "https://m.media-amazon.com/images/I/51InjRPaF7L._SX377_BO1,204,203,200_.jpg",
+    "description": "A modern introduction to programming using JavaScript, covering the language, the browser, and Node.js."
+  },
+  {
+    "title": "You Don't Know JS: Up & Going",
+    "author": "Kyle Simpson",
+    "publishedYear": 2015,
+    "isbn": "9781491924464",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9781491924464-L.jpg",
+    "description": "An essential guide to the core mechanisms of the JavaScript language, starting from the very basics."
+  },
+  {
+    "title": "The Clean Architecture",
+    "author": "Robert C. Martin",
+    "publishedYear": 2017,
+    "isbn": "9780134494166",
+    "imageUrl": "https://m.media-amazon.com/images/I/41-sN-mE8PB._SX372_BO1,204,203,200_.jpg",
+    "description": "A guide to software structure and design, focusing on creating systems that are independent of frameworks and UI."
+  },
+  {
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "publishedYear": 2009,
+    "isbn": "9780262033848",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg",
+    "description": "The definitive comprehensive guide to algorithms, used as a standard textbook in universities worldwide."
+  },
+  {
+    "title": "Grokking Algorithms",
+    "author": "Aditya Bhargava",
+    "publishedYear": 2016,
+    "isbn": "9781617292231",
+    "imageUrl": "https://m.media-amazon.com/images/I/51H-S9z82EL._SX397_BO1,204,203,200_.jpg",
+    "description": "A fully illustrated, friendly guide that teaches you how to apply common algorithms to practical problems."
+  },
+  {
+    "title": "Test Driven Development",
+    "author": "Kent Beck",
+    "publishedYear": 2002,
+    "isbn": "9780321146533",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9780321146533-L.jpg",
+    "description": "The book that popularized TDD, showing how to write cleaner, more robust code through a test-first approach."
+  },
+  {
+    "title": "Domain-Driven Design",
+    "author": "Eric Evans",
+    "publishedYear": 2003,
+    "isbn": "9780321125217",
+    "imageUrl": "https://m.media-amazon.com/images/I/51A6InXN93L._SX379_BO1,204,203,200_.jpg",
+    "description": "A framework for making complex software projects manageable by connecting the implementation to a model of the business."
+  },
+  {
+    "title": "Code Complete",
+    "author": "Steve McConnell",
+    "publishedYear": 2004,
+    "isbn": "9780735619678",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9780735619678-L.jpg",
+    "description": "Widely considered one of the best practical guides to programming, covering construction and software quality."
+  },
+  {
+    "title": "Head First Design Patterns",
+    "author": "Eric Freeman",
+    "publishedYear": 2004,
+    "isbn": "9780596007126",
+    "imageUrl": "https://m.media-amazon.com/images/I/51vYjX+H3JL._SX379_BO1,204,203,200_.jpg",
+    "description": "A visually rich guide to design patterns that uses brain-friendly learning to help you understand software design."
+  },
+  {
+    "title": "Soft Skills",
+    "author": "John Sonmez",
+    "publishedYear": 2014,
+    "isbn": "9781617292392",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9781617292392-L.jpg",
+    "description": "A guide for software developers to manage their careers, fitness, and finances."
+  },
+  {
+    "title": "Cracking the Coding Interview",
+    "author": "Gayle Laakmann McDowell",
+    "publishedYear": 2015,
+    "isbn": "9780984782857",
+    "imageUrl": "https://m.media-amazon.com/images/I/410s31S2qzL._SX397_BO1,204,203,200_.jpg",
+    "description": "The most popular resource for preparing for software engineering interviews at top tech companies."
+  },
+  {
+    "title": "Effective Java",
+    "author": "Joshua Bloch",
+    "publishedYear": 2017,
+    "isbn": "9780134685991",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9780134685991-L.jpg",
+    "description": "Best practices for the Java platform, teaching you how to use the language's features effectively."
+  },
+  {
+    "title": "The Mythical Man-Month",
+    "author": "Frederick Brooks",
+    "publishedYear": 1975,
+    "isbn": "9780201835953",
+    "imageUrl": "https://m.media-amazon.com/images/I/51Z9TdfvLmL._SX334_BO1,204,203,200_.jpg",
+    "description": "Classic essays on software engineering management and the complexities of large-scale projects."
+  },
+  {
+    "title": "Continuous Delivery",
+    "author": "Jez Humble",
+    "publishedYear": 2010,
+    "isbn": "9780321601919",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9780321601919-L.jpg",
+    "description": "How to create a reliable and automated pipeline for delivering software to users."
+  },
+  {
+    "title": "Modern Full-Stack Development",
+    "author": "Frank Zammetti",
+    "publishedYear": 2020,
+    "isbn": "9781484252321",
+    "imageUrl": "https://m.media-amazon.com/images/I/41D8V2T7y1L._SX327_BO1,204,203,200_.jpg",
+    "description": "A guide to building modern web applications using React, Node.js, and other popular tools."
+  },
+  {
+    "title": "Don't Make Me Think",
+    "author": "Steve Krug",
+    "publishedYear": 2014,
+    "isbn": "9780321965516",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9780321965516-L.jpg",
+    "description": "A common-sense guide to web usability, essential for any frontend or full-stack developer."
+  },
+  {
+    "title": "Working Effectively with Legacy Code",
+    "author": "Michael Feathers",
+    "publishedYear": 2004,
+    "isbn": "9780131177055",
+    "imageUrl": "https://m.media-amazon.com/images/I/51Y3mZ51p9L._SX376_BO1,204,203,200_.jpg",
+    "description": "Strategies for working with and improving large codebases that lack tests."
+  },
+  {
+    "title": "Learning React",
+    "author": "Alex Banks",
+    "publishedYear": 2020,
+    "isbn": "9781492044840",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9781492044840-L.jpg",
+    "description": "A hands-on guide to building web applications with the React library."
+  },
+  {
+    "title": "Node.js Design Patterns",
+    "author": "Mario Casciaro",
+    "publishedYear": 2020,
+    "isbn": "9781839214110",
+    "imageUrl": "https://m.media-amazon.com/images/I/51YnBvO5EUL._SX404_BO1,204,203,200_.jpg",
+    "description": "Master the best practices and patterns for building robust Node.js applications."
+  },
+  {
+    "title": "Programming Pearls",
+    "author": "Jon Bentley",
+    "publishedYear": 1999,
+    "isbn": "9780201657883",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9780201657883-L.jpg",
+    "description": "A collection of essays that offer clever solutions to common programming problems."
+  },
+  {
+    "title": "The Art of Computer Programming",
+    "author": "Donald Knuth",
+    "publishedYear": 1997,
+    "isbn": "9780201896831",
+    "imageUrl": "https://m.media-amazon.com/images/I/410S39p0zSL._SX331_BO1,204,203,200_.jpg",
+    "description": "One of the most foundational works in computer science, covering algorithms and data structures."
+  },
+  {
+    "title": "User Story Mapping",
+    "author": "Jeff Patton",
+    "publishedYear": 2014,
+    "isbn": "9781491904909",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9781491904909-L.jpg",
+    "description": "A practical guide to understanding what users really want and how to build it."
+  },
+  {
+    "title": "Site Reliability Engineering",
+    "author": "Niall Richard Murphy",
+    "publishedYear": 2016,
+    "isbn": "9781491929124",
+    "imageUrl": "https://m.media-amazon.com/images/I/51N-A3B+4UL._SX379_BO1,204,203,200_.jpg",
+    "description": "How Google runs its production systems, focusing on reliability and scalability."
+  },
+  {
+    "title": "Building Microservices",
+    "author": "Sam Newman",
+    "publishedYear": 2015,
+    "isbn": "9781491950357",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9781491950357-L.jpg",
+    "description": "A comprehensive guide to designing, deploying, and maintaining microservices architectures."
+  },
+  {
+    "title": "The Phoenix Project",
+    "author": "Gene Kim",
+    "publishedYear": 2013,
+    "isbn": "9780988262591",
+    "imageUrl": "https://m.media-amazon.com/images/I/51f8B+S82vL._SX331_BO1,204,203,200_.jpg",
+    "description": "A novel about IT, DevOps, and helping your business win through technical excellence."
+  },
+  {
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "publishedYear": 2017,
+    "isbn": "9781449373320",
+    "imageUrl": "https://covers.openlibrary.org/b/isbn/9781449373320-L.jpg",
+    "description": "The best resource for understanding how to build scalable, reliable, and maintainable data systems."
+  }
+]

@@ -63,4 +63,9 @@ export class Book {
   @IsOptional()
   @IsUrl()
   imageUrl?: string | null;
+
+  @Field(() => Boolean, { defaultValue: true })
+  @IsBoolean()
+  @Type(() => Boolean)
+  isActive!: boolean;
 }
